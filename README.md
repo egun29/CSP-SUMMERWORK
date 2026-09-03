@@ -7,12 +7,12 @@ Upgrade 0: Start generating cash at a rate of 0.01 per second. Cost: $0
 Upgrade 1: Double cash gain. Cost: $0.10  
 Upgrade 2: 1.5x cash gain. Cost: $0.25  
 Upgrade 3: 1x boost, +0.1x for every other upgrade you own (capped at 3x). Cost: $0.60  
-Upgrade 4: +0.01 cash per second buyable 5 times. Cost: 0.4->0.8->1.6->3.2->6.4  
+Upgrade 4: +0.01 cash per second buyable 5 times. Cost: $0.40->$0.80->$1.60->$3.20->$6.40  
 Upgrade 5: Start generating Time Fuel at a rate of 1/s. Cost: $2.50  
 Upgrade 6: Time Fuel boosts cash. Cost: $5.00  
 Upgrade 7: Double Time Fuel gain. Cost: $12.00 and 30 Time Fuel  
-Upgrade 8: 20% more cash gain compounding per level. Cost: 15->30->60->120->240 (halved per Upgrade 9 level)  
-Upgrade 9: 1/2 Upgrade 8 cost per level and grants 1.5x cash gain per tier. Cost: 150->350->800->1800->4000  
+Upgrade 8: 20% more cash gain compounding per level. Cost: $15->$30->$60->$120->$240 (halved per Upgrade 9 level)  
+Upgrade 9: 1/2 Upgrade 8 cost per level and grants 1.5x cash gain per tier. Cost: $150->$350->$800->$1800->$4000  
 Upgrade 10: Huge 5x boost before reset. Cost: $25,000 and 300 Time Fuel  
 Reset 1: Reset Cash and Time Fuel to gain Gold  
 Upgrade 11: Start of requirement upgrades(don't lose gold), 2.5x cash gain per tier buyable 5 times. Cost: 1->3->8->20->50 Gold  
