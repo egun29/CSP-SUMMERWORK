@@ -1,6 +1,6 @@
 # CSP-SUMMERWORK  
 Made by Dima and Justin  
-Our code can be run on Roblox. To run, go to the game's location ([https://www.roblox.com/games/87765317553929](https://www.roblox.com/games/87765317553929), click play, and then you will be able to run the game after you install roblox.  
+Our code can be run on Roblox. To run, go to the game's location ([https://www.roblox.com/games/87765317553929](https://www.roblox.com/games/87765317553929)), click play, and then you will be able to run the game after you install roblox.  
 Our upgrade tree upgrades are listed below.  
 Our upgrade progression:  
 Upgrade 0: Start generating cash at a rate of 0.01 per second. Cost: $0  
