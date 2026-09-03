@@ -27,5 +27,5 @@ Upgrade 18: Improve Reset 1 formula Cost: 1 Reset Token
 Upgrade 19: Every currency buff 1.5x. Cost: 1 Reset Token  
 Upgrade 20: Unlock obby. Cost: 3 Reset Tokens  
 Upgrade 21: Clear obby to beat the game and get a badge.  
-uml diagram:  
+UML diagram:  
 <img width="634" height="312" alt="Screenshot 2026-09-03 at 12 58 50 AM" src="https://github.com/user-attachments/assets/f35ddbb9-1a30-49bc-9cea-6e1e0d319ac0" />
