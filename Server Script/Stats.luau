@@ -121,10 +121,12 @@ Players.PlayerAdded:Connect(function(player)
 		while player:IsDescendantOf(Players) do
 			--Makes a speedBoost that shortens time between each passive cash gain
 			local speedBoost = 1 + (timeFuel.Value / 10)
+
 			if hasUpgrade12.Value then
 			--If the player has bought Upgrade 12, timeFuel provides a bigger bonus
 				speedBoost = 1 + (timeFuel.Value / 5)
 			end
+
 			--Sets the currentTickInterval, with the base tick value being reduced by the speedBost value (curretly 1, so no reduction)
 			--and also adds a min tick value so that the currentTickInterval cannot become negative
 			local currentTickInterval = math.max(MIN_TICK_INTERVAL, BASE_TICK_INTERVAL / speedBoost)
@@ -134,6 +136,7 @@ Players.PlayerAdded:Connect(function(player)
 			--Combines the passiveRateMultiplier with a boost from timeFuel
 			-- only if the player has Upgrade 6
 			if hasUpgrade6.Value then
+
 			--If the player has also obtained Ugrade 12, timeFuel's contribution recieves a 2x boost
 				if hasUpgrade12.Value then
 					effectiveCashMultiplier += (timeFuel.Value * 2)
@@ -141,16 +144,21 @@ Players.PlayerAdded:Connect(function(player)
 					effectiveCashMultiplier += timeFuel.Value
 				end
 			end
+
 			--Formula for the total cash rate, taking the passive rate the player generates cash 
 			--and multiplying by the effectiveCashMultipler
 			local totalCashRate = passiveRate.Value * effectiveCashMultiplier
 			if totalCashRate > 0 then
+
 			--The gainedCash that the player receives is the rate they gain it by divided by the time it takes to gain that rate
 				local gainedCash = totalCashRate / currentTickInterval
+
 				if hasUpgrade17.Value then
 			-- If the player has Upgrade 17 increase the gainedCash by taking it to the 1.05 power
+				
 					gainedCash = gainedCash ^ 1.05
 				end
+
 			-- Adds the final gainedCash to the player's cash
 				cash.Value += gainedCash
 			end
@@ -159,21 +167,27 @@ Players.PlayerAdded:Connect(function(player)
 
 	task.spawn(function()
 		while player:IsDescendantOf(Players) do
+
 			--Formula for timeFuel gain
-			--Makes a speedBoost that shortens time between each passive cash gain
+			--Makes a speedBoost that shortens time between each timeFuel gain
 			--If the player has bought Upgrade 12, timeFuel provides a bigger bonus--Combines the passiveRateMultiplier with a boost from timeFuel
 			-- only if the player has Upgrade 6
+
 			local speedBoost = 1 + (timeFuel.Value / 10)
 			if hasUpgrade12.Value then
 				speedBoost = 1 + (timeFuel.Value / 5)
 			end
 
+			--Sets the currentTickInterval, with the base tick value being reduced by the speedBost value (curretly 1, so no reduction)
+			--and also adds a min tick value so that the currentTickInterval cannot become negative
 			local currentTickInterval = math.max(MIN_TICK_INTERVAL, BASE_TICK_INTERVAL / speedBoost)
 			task.wait(currentTickInterval)
-
+			
+			--Formula for the total timeFuel, taking the passive rate the player generates timeFuel 
+			--and multiplying by the timeFuelMultiplier
 			local totalTimeFuelRate = timeFuelRate.Value * timeFuelMultiplier.Value
 			if totalTimeFuelRate > 0 then
-				timeFuel.Value += (totalTimeFuelRate * currentTickInterval)
+				timeFuel.Value += (totalTimeFuelRate / currentTickInterval)
 			end
 		end
 	end)
