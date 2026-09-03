@@ -16,30 +16,30 @@ Players.PlayerAdded:Connect(function(player)
 	cash.Value = 0
 	cash.Parent = leaderstats
 
--- Create the player's TimeFuel currency/resource
+-- Creates the player's TimeFuel currency
 	local timeFuel = Instance.new("NumberValue")
 	timeFuel.Name = "TimeFuel"
 	timeFuel.Value = 0
 	timeFuel.Parent = leaderstats
 
---Create the player's Gold currency
+--Creates the player's Gold currency
 	local gold = Instance.new("NumberValue")
 	gold.Name = "Gold"
 	gold.Value = 0
 	gold.Parent = leaderstats
 
---Create the player's Reset Tokens currency
+--Creates the player's Reset Tokens currency
 	local resetTokens = Instance.new("NumberValue")
 	resetTokens.Name = "ResetTokens"
 	resetTokens.Value = 0
 	resetTokens.Parent = leaderstats
 
--- Create a separate folder for stats that aren't shown on the default leaderboard
+-- Creates a separate folder for stats that aren't shown on the default leaderboard
 	local playerStats = Instance.new("Folder")
 	playerStats.Name = "PlayerStats"
 	playerStats.Parent = player
 
--- Stores how many upgrades the player has unlcoked
+-- Tracks how many upgrades the player has unlcoked
 	local upgradesOwned = Instance.new("IntValue")
 	upgradesOwned.Name = "UpgradesOwned"
 	upgradesOwned.Value = 0
